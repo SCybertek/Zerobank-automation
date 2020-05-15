@@ -1,6 +1,8 @@
 package com.zerobank.stepdefinitions;
 
 import com.zerobank.pages.AccountActivityPage;
+import com.zerobank.pages.LoginPage;
+import com.zerobank.pages.PageBase;
 import com.zerobank.utilities.BrowserUtils;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
@@ -11,6 +13,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.List;
 
 public class AccountActivityStepDefinition {
+   LoginPage loginPage=new LoginPage();
     AccountActivityPage accountActivityPage=new AccountActivityPage();
     WebDriverWait wait;
 
@@ -27,11 +30,11 @@ public class AccountActivityStepDefinition {
         Assert.assertEquals(column,accountActivityPage.accountActivityTabNames());
     }
 
-     @When("User navigate to Account Activity")
-     public void user_navigate_to_Account_Activity() {
-         BrowserUtils.wait(4);
-         accountActivityPage.accountActivityClick();
-}
+    @When("User navigate to {string}")
+    public void user_navigate_to(String string) {
+    loginPage.navigate_to_tabName(string);
+    BrowserUtils.wait(4);
+    }
 
     @Then("following account drop down should be available")
     public void following_account_drop_down_should_be_available(List<String> dropDown) {

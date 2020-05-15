@@ -3,7 +3,7 @@ Feature: Find Transactions in Account Activity
   Background:
     Given user is on the login page
     When user logs in with valid credentials
-    And User navigate to Account Activity
+    And User navigate to "Account Activity"
     And the user accesses the Find Transactions tab
 
 @date

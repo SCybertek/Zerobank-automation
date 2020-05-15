@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         glue = "com/zerobank/stepdefinitions" ,
         features = "src/test/resources/features" ,
         dryRun = false,
-        tags = "@download",
+        tags = "@smoke_test",
         plugin = {"html:target/default-report",
                 "json:target/cucumber1.json" ,
                 "rerun:target/rerun.txt"

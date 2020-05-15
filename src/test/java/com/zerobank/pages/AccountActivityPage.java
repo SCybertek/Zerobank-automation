@@ -15,19 +15,14 @@ public class AccountActivityPage extends PageBase {
 
     @FindBy(xpath = "//select[@id='aa_accountId']//option[1]")
     private WebElement defaultOptionSaving;
-    @FindBy(id = "account_activity_tab")
-    private WebElement accountActivity;
+//    @FindBy(id = "account_activity_tab")
+//    private WebElement accountActivity;
+
     @FindBy(xpath ="//div[@id='all_transactions_for_account']//th" )
     private List<WebElement>accountActivityTabNamesElements;
     @FindBy(xpath = "//select[@id='aa_accountId']//option")
     private List<WebElement> dropDownElements;
 
-
-    public void accountActivityClick(){
-        BrowserUtils.waitForPageToLoad(10);
-        BrowserUtils.wait(3);
-        accountActivity.click();
-    }
     public WebElement setDefaultOptionSaving(){
         BrowserUtils.wait(3);
         return defaultOptionSaving;

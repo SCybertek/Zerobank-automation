@@ -32,4 +32,5 @@ public class AccountActivityNavigationStepDefinition {
         Assert.assertTrue(accountActivityNavigationPageBase.clickLink(string).isSelected());
 
     }
+
 }

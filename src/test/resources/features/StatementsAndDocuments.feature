@@ -4,7 +4,7 @@ Feature: Statements and Documents details
   Background:
     Given user is on the login page
     When user logs in with valid credentials
-    Given User navigate to Online Statements
+    Given User navigate to "Online Statements"
   @recent
   Scenario Outline: Recent statements per year
     Given the user accesses the Statements & Documents tab

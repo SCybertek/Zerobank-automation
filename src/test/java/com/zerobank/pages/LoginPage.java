@@ -55,4 +55,11 @@ public class LoginPage extends PageBase{
         BrowserUtils.waitForPageToLoad(10);
         BrowserUtils.waitForPageToLoad(3);
     }
+    public  void navigate_to_tabName(String str){
+        String xpath="//ul[@class='nav nav-tabs']//a[text()= '"+str+"']";
+        driver.findElement(By.xpath(xpath)).click();
+        BrowserUtils.waitForPageToLoad(15);
+        BrowserUtils.wait(5);
+    }
+
 }
