@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.weborders</groupId>
-    <artifactId>CucumberWebOrdersFall2019</artifactId>
+    <artifactId>Zerobank-automation</artifactId>
     <version>1.0-SNAPSHOT</version>
 
     <properties>
@@ -34,8 +34,8 @@
                     <parallel>methods</parallel>
                     <useUnlimitedThreads>true</useUnlimitedThreads>
                     <includes>
-                        <!--list all runner classes here  -->
-                        <include>**/*SmokeTestRunner*.java</include>
+                        <!-- for  run class or classes-->
+                        <include>**/CucumberRunner*.java</include>
                     </includes>
                     <testFailureIgnore>true</testFailureIgnore>
                 </configuration>
